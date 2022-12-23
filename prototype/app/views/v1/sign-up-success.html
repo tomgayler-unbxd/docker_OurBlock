@@ -1,0 +1,18 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   <h1 class="govuk-heading-xl">You have successfully signed up</h1>
+   <p class="govuk-body">You can now close this page.</p>
+   <p class="govuk-body"><strong>{{data['director-name']}}</strong> will be in touch with you shortly.</p>
+  </div>
+</div>
+
+{% endblock %}

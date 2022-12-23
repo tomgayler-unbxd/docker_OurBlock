@@ -1,0 +1,53 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   <form class="form" action="/block-address" method="post"> 
+    <fieldset class="govuk-fieldset">
+      <div class="govuk-form-group">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          What is the address of your property?
+        </h1>
+      </legend>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="b-address-line-1">
+          Address line 1
+        </label>
+        <input class="govuk-input" id="b-address-line-1" name="b-address-line-1" type="text" autocomplete="b-address-line1">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="b-address-line-2">
+          Address line 2 (optional)
+        </label>
+        <input class="govuk-input" id="b-address-line-2" name="b-address-line-2" type="text" autocomplete="b-address-line2">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="b-address-town">
+          Town or city
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="b-address-town" name="b-address-town" type="text" autocomplete="b-address-level2">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="b-address-postcode">
+          Postcode
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="b-address-postcode" name="b-address-postcode" type="text" autocomplete="b-postal-code">
+      </div>
+    </div>
+    <button class="govuk-button" data-module="govuk-button">
+      Next
+    </button>
+    </fieldset>
+  </form>
+  </div>
+</div>
+
+{% endblock %}

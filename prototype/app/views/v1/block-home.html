@@ -13,7 +13,7 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
       Our Block
     </h1>
     <h2 class="govuk-heading-l">
-      34 Chesteron Avenue, London, SE8 7HG
+      {{data['b-address-line-1']}} {{data['b-address-line-2']}}, {{data['b-address-town']}}, {{data['b-address-postcode']}}
     </h2>
   </div>
   <div class="govuk-grid-column-full">
@@ -21,6 +21,14 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
       Add an owner
     </button>
   </form>
+  <form action="director-name.html"> <button class="govuk-button" data-module="govuk-button">
+    Your details
+  </button>
+</form>
+<form action="block-address.html"> <button class="govuk-button" data-module="govuk-button">
+  Block details
+</button>
+</form>
 
     <table class="govuk-table">
       <caption class="govuk-table__caption govuk-table__caption--m">Owners</caption>

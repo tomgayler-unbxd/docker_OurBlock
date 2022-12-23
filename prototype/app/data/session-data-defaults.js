@@ -22,8 +22,9 @@ module.exports = {
     "role": "test",
     "owner-name": "test",
     "owner-unit": "test",
-    "director-name": "Ex Ample",
+    "director-name": "Tom Gayler",
     "address": "101 Building Name, Street Name, Town",
+    "flat number": "Flat 1",
     
 
 

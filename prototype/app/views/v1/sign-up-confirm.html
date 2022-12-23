@@ -15,9 +15,11 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
     <h2 class="govuk-heading-l">
       Reply to your invite to OurBlock
     </h2>
-    <p class="govuk-body">Your neighbour <strong>{{ data['director-name']}}</strong> is using OurBlock to help leaseholders work together. They have invited you to join the group for <strong>{{ data['address']}}</strong>. By confirming they will be able to contact</p>
+    <p class="govuk-body">This is an invite for <strong>{{data['flat number']}}</strong>.</p>
+    <p class="govuk-body">Your neighbour <strong>{{ data['director-name']}}</strong> is using OurBlock to help leaseholders work together. They have invited you to join the group for <strong>{{ data['address']}}</strong>. </p> 
+    <p class="govuk-body">By confirming they will be able to contact you.</p>
 
-    <form class="form" action="block-home-2" method="post"> 
+    <form class="form" action="sign-up-name" method="post"> 
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
           <h1 class="govuk-fieldset__heading">

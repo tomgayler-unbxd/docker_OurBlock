@@ -1,0 +1,28 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+   <form class="form" action="block-home" method="post"> 
+    <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="director-name">
+          What is your name?
+        </label>
+      </h1>
+      <input class="govuk-input" id="director-name" name="director-name" type="text" type="submit">
+    </div>
+    <button class="govuk-button" data-module="govuk-button">
+      Next
+    </button>
+  </form>
+
+    
+  </div>
+</div>
+
+{% endblock %}

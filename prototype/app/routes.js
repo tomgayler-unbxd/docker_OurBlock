@@ -2,27 +2,28 @@ const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
 
-// Passing data into a page
-router.get('/history/bucks-example', function(req, res) {
-    res.render('/history/bucks_example ', {
-        'reference': ' Foo '
-    })
-})
 
-// Branching for managers to say they don't agree with the recommendation 
-// Found on permitted-dev-reqs-manager
-router.post('/approve-recommendation-answer', function(req, res) {
+// Branching for non-resident owners to give their address 
+// Found on sign-up-role
+router.post('/role-check', function(req, res) {
     // Get the answer from session data
     // The name between the quotes is the same as the 'name' attribute on the input elements
     // However in JavaScript we can't use hyphens in variable names
 
-    let over18 = req.session.data['how-contacted']
+    let role = req.session.data['role']
 
-    if (over18 === 'phone') {
-        res.redirect('v08/application-list-manager-amendments#amendment')
+    if (role === 'Owner occupier') {
+        res.redirect('v1/sign-up-success')
     } else {
-        res.redirect('v08/review-recommendation')
+        res.redirect('v1/sign-up-nonresident')
     }
+})
+
+// Create a single address object from different lines of address
+router.post('/block-address', function(req, res) {
+let address = req.session.data['b-address-line-1'+'b-address-line-2'+'b-address-town'+'b-address-postcode']
+
+res.redirect('v1/block-home')
 })
 
 
