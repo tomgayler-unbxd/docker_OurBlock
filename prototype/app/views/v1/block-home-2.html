@@ -1,0 +1,70 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Our Block
+    </h1>
+    <h2 class="govuk-heading-l">
+      34 Chesteron Avenue, London, SE8 7HG
+    </h2>
+
+   <form action="new-owner-name.html"> <button class="govuk-button" data-module="govuk-button">
+      Add an owner
+    </button>
+  </form>
+
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Owners</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Name</th>
+          <th scope="col" class="govuk-table__header">Unit</th>
+          <th scope="col" class="govuk-table__header">Role</th>
+          <th scope="col" class="govuk-table__header">Signed up?</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Hari Ansari</th>
+          <td class="govuk-table__cell">Flat 1</td>
+          <td class="govuk-table__cell">Owner occupier</td>
+          <td class="govuk-table__cell">No</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Peter Gough</th>
+          <td class="govuk-table__cell">Flat 3</td>
+          <td class="govuk-table__cell">Owner occupier</td>
+          <td class="govuk-table__cell">No</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Mohammed Gul</th>
+          <td class="govuk-table__cell">Flat 4</td>
+          <td class="govuk-table__cell">Non-resident owner</td>
+          <td class="govuk-table__cell">No</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Dale Steyn</th>
+          <td class="govuk-table__cell">Flat 9</td>
+          <td class="govuk-table__cell">Non-resident owner</td>
+          <td class="govuk-table__cell">No</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">{{ data['owner-name'] }}</th>
+          <td class="govuk-table__cell">{{ data['owner-unit'] }}</td>
+          <td class="govuk-table__cell">{{ data['role'] }}</td>
+          <td class="govuk-table__cell">No</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock %}
