@@ -1,0 +1,36 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Our Block
+    </h1>
+    <h2 class="govuk-heading-l">
+      Add an email for the owner
+    </h2>
+
+   <form class="form" action="update-owner-unit" method="post"> 
+    <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="owner-email">
+          What is the owners email?
+        </label>
+      </h1>
+      <input class="govuk-input" id="owner-email" name="owner-email" type="text" type="submit" value="{{ data['owner-email'] }}">
+    </div>
+    <button class="govuk-button" data-module="govuk-button">
+      Next
+    </button>
+  </form>
+
+    
+  </div>
+</div>
+
+{% endblock %}
