@@ -19,12 +19,7 @@ router.post('/role-check', function(req, res) {
     }
 })
 
-// Create a single address object from different lines of address
-router.post('/block-address', function(req, res) {
-let address = req.session.data['b-address-line-1'+'b-address-line-2'+'b-address-town'+'b-address-postcode']
 
-res.redirect('v1/block-home')
-})
 
 
 
